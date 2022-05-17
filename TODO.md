@@ -17,4 +17,5 @@
 * ~~Add assets -> _tkinter.TclError: couldn't open "C:\Users\Usuari\development_env\test_environmet\lib\site-packages\gui_frame_ext\assets\icon_app.png":~~
 * ~~Add requirements -> OK (modify setup.cfg)~~
 
+* Update screenshots and documentation.
 
