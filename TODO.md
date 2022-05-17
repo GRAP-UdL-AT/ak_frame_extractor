@@ -1,3 +1,6 @@
+#TODO LIST
+
+## Clean code practices
 * ~~Add icon app -> OK~~
 * ~~Add maximize -> OK~~
 * Organise layout
@@ -18,4 +21,12 @@
 * ~~Add requirements -> OK (modify setup.cfg)~~
 
 * Update screenshots and documentation.
+
+## GUI Interface
+
+## Manage devices
+
+## Configuration and settings
+
+## Package systems
 
