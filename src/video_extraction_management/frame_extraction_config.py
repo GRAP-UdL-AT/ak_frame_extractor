@@ -21,7 +21,7 @@ class FramesManagerConfig:
     f_config_name = os.path.join(BASE_DIR, 'conf', 'frames_extractor.conf')
     path_video_input = os.path.join(BASE_DIR, 'recorded_video')
     path_images_output = os.path.join(BASE_DIR, 'exported_images')
-    path_mesh_output = os.path.join(BASE_DIR, 'exported_mesh')
+    path_mesh_output = os.path.join(BASE_DIR, 'cloud_points')
     # todo: 15/02/2022 check this is temporal
     path_annotations_output = os.path.join(BASE_DIR, 'annotations')
 

@@ -148,7 +148,7 @@ class FramesVideoManager:
                 f2 = open(os.path.join(self._frame_video_config.path_annotations_output, img_annotation_RGB), "w")
                 f2.write(base_name + '\n')
                 f2.close()
-
+                # todo: add 3d point clouds
                 # ------------------------------------
                 if capture.color is not None:
                     cv2.imwrite(os.path.join(self._frame_video_config.path_images_output, img_write_filename_RGB),
@@ -187,6 +187,7 @@ class FramesVideoManager:
         :param number_of_frames: number of frames to extract
         :return:
         """
+        # todo: add 3d point clouds
         playback = PyK4APlayback(self._a_matroska_file)
         playback.open()
 
@@ -362,12 +363,64 @@ class FramesVideoManager:
 
         return frames_written, errors, output_folder
 
+
     def export_frames_to_colorized_mesh(self, start_offset, number_of_frames=None, filename=None):
-        # todo: will be implemented
-        frames_written = 0
+
+        """
+        From one Matroska file, extract frames and save them into a directory as mesh file
+
+        :param a_matroska_file: a path with Matroska file name
+        :param start_offset: number of seconds from the beginning
+        :param number_of_frames: number of frames to extract
+        :return:
+        """
+        playback = PyK4APlayback(self._a_matroska_file)
+        playback.open()
+
+        if start_offset != 0.0:
+            playback.seek(int(start_offset * 1000000))
+
+        if number_of_frames is None:
+            number_of_frames = playback.length
+
+        if filename is None:
+            filename_with_ext = os.path.splitext(self._a_matroska_file)[0]
+            filename = os.path.basename(filename_with_ext)
+        try:
+            print("a_matroska_file -->", self._a_matroska_file)
+            print("start_offset -->", start_offset)
+            print("number_of_frames -->", number_of_frames)
+            print("self._frame_video_config.path_images_ouput -->", self._frame_video_config.path_images_output)
+            print("self._frame_video_config.path_mesh_output -->", self._frame_video_config.path_mesh_output)
+
+            frames_written = 0
+            while frames_written < number_of_frames:
+                print("frames_written=", frames_written)
+                capture = playback.get_next_capture()
+                # ------------------------------------
+                img_write_filename_mesh = filename + '_' + self._frame_video_config.rgb_data_filename + '_' + str(
+                    start_offset) + '_' + str(frames_written) + self._frame_video_config.file_mesh_extension
+                # ------------------------------------
+                if np.any(capture.depth) and np.any(capture.color):
+                    #if capture.depth is not None:
+                    # todo:add mesh data function to save
+                    points_data = capture.depth_point_cloud.reshape((-1, 3))
+                    color_data = capture.transformed_color[..., (2, 1, 0)].reshape((-1, 3))
+                    point_cloud_3d = np.append(points_data, color_data, axis=1)
+                    np.savetxt(os.path.join(self._frame_video_config.path_mesh_output, img_write_filename_mesh), point_cloud_3d, delimiter=' ', fmt='%u')
+                    #points = capture.depth_point_cloud.reshape((-1, 3))
+                    #np.savetxt(os.path.join(self._frame_video_config.path_mesh_output, img_write_filename_mesh), points,
+                    #           delimiter=' ', fmt='%u')
+                frames_written = frames_written + 1
+        except EOFError:
+            pass
+        playback.close()
         errors = "STRING_ERROR"
         output_folder = self._frame_video_config.path_mesh_output
+
         return frames_written, errors, output_folder
+
+
 
 # TODO: 17/11/2021 Colorized cloud points functions. At this time we have implemented a cloud point without color.
 #  To generate a colorized cloud point the image format color must be K4A_IMAGE_FORMAT_COLOR_BGRA32.

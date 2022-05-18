@@ -29,6 +29,7 @@ class DatasetConfig:
     squares_sub_folder = 'square_annotations1'
     sets_sub_folder = 'sets'
     masks_sub_folder = 'masks'
+    cloud_points_sub_folder = 'cloud_points'
 
     img_extension = '.png'
     ir_extension = '.mat'
@@ -48,6 +49,7 @@ class DatasetConfig:
     dataset_squares_path = None
     dataset_sets_path = None
     dataset_masks_path = None
+    dataset_cloud_points_path = None
 
     def __init__(self, base_path, dataset_name):
         logging.debug('%s - Constructor', type(self).__name__)
@@ -63,6 +65,8 @@ class DatasetConfig:
             self.dataset_squares_path = os.path.join(self.dataset_root_path, self.squares_sub_folder)
             self.dataset_sets_path = os.path.join(self.dataset_root_path, self.sets_sub_folder)
             self.dataset_masks_path = os.path.join(self.dataset_root_path, self.masks_sub_folder)
+            self.dataset_cloud_points_path = os.path.join(self.dataset_root_path, self.cloud_points_sub_folder)
+
 
     def set_default(self):
         self.dataset_root_path = os.path.join(self.base_path, self.dataset_root_folder)
@@ -71,6 +75,7 @@ class DatasetConfig:
         self.dataset_squares_path = os.path.join(self.dataset_root_path, self.squares_sub_folder)
         self.dataset_sets_path = os.path.join(self.dataset_root_path, self.sets_sub_folder)
         self.dataset_masks_path = os.path.join(self.dataset_root_path, self.masks_sub_folder)
+        self.dataset_cloud_points_path = os.path.join(self.dataset_root_path, self.cloud_points_sub_folder)
 
     def read_config(self):
         """
@@ -109,5 +114,6 @@ class DatasetConfig:
                 str(self.dataset_images_path),
                 str(self.dataset_annotations_path),
                 str(self.dataset_squares_path),
-                str(self.dataset_sets_path)
+                str(self.dataset_sets_path),
+                str(self.dataset_cloud_points_path)
                 )

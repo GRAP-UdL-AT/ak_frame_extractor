@@ -21,6 +21,7 @@
 * ~~Add requirements -> OK (modify setup.cfg)~~
 
 * Update screenshots and documentation.
+* Add examples of: R, MATLAB, Python
 
 ## GUI Interface
 

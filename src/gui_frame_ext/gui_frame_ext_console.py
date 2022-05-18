@@ -32,6 +32,10 @@ class GUIFrameExtractorConsole2(tk.Tk):
     ENTRY_WIDTH_PATH = 50
     BUTTON_WIDTH = 10
 
+    TAB_TITLE_1 = 'Dataset Creation'
+    TAB_TITLE_2 = 'Data Extraction'
+    TAB_TITLE_3 = 'Data Migration'
+
     create_dataset_frame = None
     create_dataset_options_frame = None
     user_path_label = None
@@ -51,6 +55,16 @@ class GUIFrameExtractorConsole2(tk.Tk):
     offset_spinbox = None
     number_of_frames_label = None
     number_of_frames_spinbox = None
+    # ----
+    rgb_check_var = None
+    depth_check_var = None
+    ir_check_var = None
+    cloud_points_check_var = None
+    rgb_check = None
+    depth_check = None
+    ir_check = None
+    cloud_points_check =  None
+    # ----
     extract_folder_data_frame = None
     input_folder_label = None
     input_folder_entry = None
@@ -96,15 +110,14 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.create_status_bar()
         self.create_message_info()
         # ---------------------------
-
     def create_tabs(self):
         self.tab_group = ttk.Notebook(self)
         self.tab_1 = tk.Frame(self.tab_group)
         self.tab_2 = tk.Frame(self.tab_group)
         self.tab_3 = tk.Frame(self.tab_group)
-        self.tab_group.add(self.tab_1, text='Dataset Creation')
-        self.tab_group.add(self.tab_2, text='Data Extraction')
-        self.tab_group.add(self.tab_3, text='Data Migration')
+        self.tab_group.add(self.tab_1, text=self.TAB_TITLE_1)
+        self.tab_group.add(self.tab_2, text=self.TAB_TITLE_2)
+        self.tab_group.add(self.tab_3, text=self.TAB_TITLE_3)
         self.tab_group.pack(expand=1, fill="both")
         pass
 
@@ -193,6 +206,28 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.number_of_frames_spinbox['validate'] = 'all'
         self.number_of_frames_spinbox['validatecommand'] = (
             self.number_of_frames_spinbox.register(digit_validation), '%P', '%d')
+        # ---- check options
+        self.type_of_data_label = tk.Label(self.data_options_frame, text='Type of data to export:', width=self.LABEL_WIDTH)
+        self.type_of_data_label.grid(row=3, column=1, sticky=tk.W, ipadx=3, ipady=3)
+
+        self.rgb_check_var = tk.IntVar()
+        self.depth_check_var = tk.IntVar()
+        self.ir_check_var = tk.IntVar()
+        self.cloud_points_check_var = tk.IntVar()
+
+        self.rgb_check_var.set(1) # todo: 18/05/2022 check with functions to see if video recorded is in BGRA
+        self.depth_check_var.set(1)
+        self.ir_check_var.set(1)
+        self.cloud_points_check_var.set(1)
+
+        self.rgb_check = tk.Checkbutton(self.data_options_frame, text='RGB', variable=self.rgb_check_var)
+        self.rgb_check.grid(row=3, column=2, sticky=tk.W, ipadx=3, ipady=3)
+        self.depth_check = tk.Checkbutton(self.data_options_frame, text='Depth', variable=self.depth_check_var)
+        self.depth_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
+        self.ir_check = tk.Checkbutton(self.data_options_frame, text='IR', variable=self.ir_check_var)
+        self.ir_check.grid(row=3, column=4, sticky=tk.W, ipadx=3, ipady=3)
+        self.cloud_points_check = tk.Checkbutton(self.data_options_frame, text='Cloud points', variable=self.cloud_points_check_var)
+        self.cloud_points_check.grid(row=3, column=5, sticky=tk.W, ipadx=3, ipady=3)
 
         ########################################################
         # EXTRACT DATA FROM FOLDER
@@ -559,16 +594,25 @@ class GUIFrameExtractorConsole2(tk.Tk):
             self.frames_extractor_config.path_images_output = self.dataset_config.dataset_images_path
             # TODO: 15/02/2022 temporal
             self.frames_extractor_config.path_annotations_output = self.dataset_config.dataset_annotations_path
-            track_file = os.path.join(self.dataset_config.dataset_sets_path, 'all.txt')
+            print(self.current_path_entry.get())
+            track_file = os.path.join(self.dataset_config.dataset_sets_path, 'all.txt') # todo: check error with this 19/05/2022
             # ------------------------
             frames_extractor_obj = FramesVideoManager(self.frames_extractor_config, an_input_file)
             [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_files(track_file, an_offset,
                                                                                                   a_number_of_frames)
             results_info_str = f"frames written {frames_written} errors {errors} output folder {output_folder}"
+
+            # 19/05/2022 todo add option checkers
+            self.frames_extractor_config.path_mesh_output = self.dataset_config.dataset_cloud_points_path
+            [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_colorized_mesh(an_offset, a_number_of_frames)
+            results_info_str_3d = f"frames written {frames_written} errors {errors} output folder {output_folder}"
+
         # ----------------------------------------
         analyze_status_str = path_filename_selected + "\n"
         self.messages_info.insert("1.0", "Extracting from " + analyze_status_str)
         self.results_info.insert("1.0", results_info_str)
+        self.results_info.insert("1.0", results_info_str_3d)
+        # ----------------------------------------
 
     def quit_app(self):
         # ---------------------------------------------

@@ -21,6 +21,8 @@ dataset_root_path \\
             | --- '20210927_115932_k_r2_e_000_150_138_1_1_C.xml'
     | --- \\ dataset_masks_path
             | --- '20210927_115932_k_r2_e_000_150_138_1_0_C.png'
+    | --- \\ dataset_cloud_points_path
+            | --- '20210927_115932_k_r2_e_000_150_138_1_0_C.xyz'
 """
 
 import os
@@ -65,6 +67,8 @@ class DatasetManager:
         os.mkdir(self.dataset_config.dataset_squares_path)
         os.mkdir(self.dataset_config.dataset_sets_path)
         os.mkdir(self.dataset_config.dataset_masks_path)
+        os.mkdir(self.dataset_config.dataset_cloud_points_path)
+
 
     def create_labeled_XML_files(self):
         """

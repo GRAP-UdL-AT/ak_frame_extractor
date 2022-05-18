@@ -11,7 +11,7 @@ Use: python -m unittest tests/test_something.py
 """
 import unittest
 import os
-from src.video_extraction_management.frame_extraction_config import FramesManagerConfig
+from video_extraction_management.frame_extraction_config import FramesManagerConfig
 
 
 class TestFramesManagerConfig(unittest.TestCase):
