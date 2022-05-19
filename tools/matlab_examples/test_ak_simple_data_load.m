@@ -10,7 +10,7 @@
 % MATLABs scripts as .mat files.
 %% setting environment
 clc; close all; clear all;
-home_user=pwd  % POINT TO "..\ka_frame_extractor\" folder
+home_user=pwd  % POINT TO "..\ak_frame_extractor\" folder
 path_script=fullfile(home_user)
 
 % input data examples

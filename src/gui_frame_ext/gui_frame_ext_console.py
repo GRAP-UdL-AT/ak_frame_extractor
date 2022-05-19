@@ -63,7 +63,7 @@ class GUIFrameExtractorConsole2(tk.Tk):
     rgb_check = None
     depth_check = None
     ir_check = None
-    cloud_points_check =  None
+    cloud_points_check = None
     # ----
     extract_folder_data_frame = None
     input_folder_label = None
@@ -110,6 +110,7 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.create_status_bar()
         self.create_message_info()
         # ---------------------------
+
     def create_tabs(self):
         self.tab_group = ttk.Notebook(self)
         self.tab_1 = tk.Frame(self.tab_group)
@@ -207,7 +208,8 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.number_of_frames_spinbox['validatecommand'] = (
             self.number_of_frames_spinbox.register(digit_validation), '%P', '%d')
         # ---- check options
-        self.type_of_data_label = tk.Label(self.data_options_frame, text='Type of data to export:', width=self.LABEL_WIDTH)
+        self.type_of_data_label = tk.Label(self.data_options_frame, text='Extract data:',
+                                           width=self.LABEL_WIDTH)
         self.type_of_data_label.grid(row=3, column=1, sticky=tk.W, ipadx=3, ipady=3)
 
         self.rgb_check_var = tk.IntVar()
@@ -215,19 +217,20 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.ir_check_var = tk.IntVar()
         self.cloud_points_check_var = tk.IntVar()
 
-        self.rgb_check_var.set(1) # todo: 18/05/2022 check with functions to see if video recorded is in BGRA
+        self.rgb_check_var.set(1)  # todo: 18/05/2022 check with functions to see if video recorded is in BGRA
         self.depth_check_var.set(1)
         self.ir_check_var.set(1)
-        self.cloud_points_check_var.set(1)
-
-        self.rgb_check = tk.Checkbutton(self.data_options_frame, text='RGB', variable=self.rgb_check_var)
+        self.cloud_points_check_var.set(0)
+        # todo: 19/05/2022, deactivated because it will be implemented in the near future
+        self.rgb_check = tk.Checkbutton(self.data_options_frame, text='RGB, Depth, IR', variable=self.rgb_check_var)
         self.rgb_check.grid(row=3, column=2, sticky=tk.W, ipadx=3, ipady=3)
-        self.depth_check = tk.Checkbutton(self.data_options_frame, text='Depth', variable=self.depth_check_var)
-        self.depth_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
-        self.ir_check = tk.Checkbutton(self.data_options_frame, text='IR', variable=self.ir_check_var)
-        self.ir_check.grid(row=3, column=4, sticky=tk.W, ipadx=3, ipady=3)
-        self.cloud_points_check = tk.Checkbutton(self.data_options_frame, text='Cloud points', variable=self.cloud_points_check_var)
-        self.cloud_points_check.grid(row=3, column=5, sticky=tk.W, ipadx=3, ipady=3)
+        #self.depth_check = tk.Checkbutton(self.data_options_frame, text='Depth', variable=self.depth_check_var)
+        #self.depth_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
+        #self.ir_check = tk.Checkbutton(self.data_options_frame, text='IR', variable=self.ir_check_var)
+        #self.ir_check.grid(row=3, column=4, sticky=tk.W, ipadx=3, ipady=3)
+        self.cloud_points_check = tk.Checkbutton(self.data_options_frame, text='Cloud points',
+                                                 variable=self.cloud_points_check_var)
+        self.cloud_points_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
 
         ########################################################
         # EXTRACT DATA FROM FOLDER
@@ -297,13 +300,12 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.quit_button.grid(row=5, column=1, sticky=tk.EW)
         ########################################################
 
-
-
     def create_widgets_tab_3(self):
         print(self.current_path_entry.get())
         ########################################################
         # EXTRACT DATA FROM FOLDER
-        self.csv_folder_data_frame = tk.LabelFrame(self.tab_3, text=".CSV files to PASCAL_VOC conversion", relief=tk.RIDGE)
+        self.csv_folder_data_frame = tk.LabelFrame(self.tab_3, text=".CSV files to PASCAL_VOC conversion",
+                                                   relief=tk.RIDGE)
         self.csv_folder_data_frame.grid(row=2, column=1, sticky=tk.W, padx=5, pady=5)
 
         self.input_csv_folder_label = tk.Label(self.csv_folder_data_frame, text='Input folder:', width=self.LABEL_WIDTH)
@@ -314,11 +316,11 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.input_csv_folder_entry.config(state='readonly')  # by default readonly
 
         self.load_csv_folder_button = tk.Button(self.csv_folder_data_frame, text='CSV folder',
-                                            command=self.select_migrate_folder_data, width=self.BUTTON_WIDTH)
+                                                command=self.select_migrate_folder_data, width=self.BUTTON_WIDTH)
         self.load_csv_folder_button.grid(row=1, column=3, sticky=tk.W, ipadx=3, ipady=3)
 
         self.migrate_csv_folder_button = tk.Button(self.csv_folder_data_frame, text='Convert files',
-                                               command=self.migrate_folder_data, width=self.BUTTON_WIDTH)
+                                                   command=self.migrate_folder_data, width=self.BUTTON_WIDTH)
         self.migrate_csv_folder_button.grid(row=2, column=3, sticky=tk.W, ipadx=3, ipady=3)
         pass
 
@@ -487,7 +489,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.messages_info.insert("end", analyze_status_str)
         self.results_info.insert("end", "Extracting from " + results_info_str)
 
-
     def select_migrate_folder_data(self):
         analyze_status_str = ""
         directory_selected = filedialog.askdirectory(initialdir=self.r_config.input_dataset_folder)
@@ -532,11 +533,11 @@ class GUIFrameExtractorConsole2(tk.Tk):
             # ----------------------------------------
             for a_filename in os.listdir(directory_annotations):
                 # self.r_config.file_extension_to_search
-                #if a_filename.endswith('.csv'):
+                # if a_filename.endswith('.csv'):
                 a_path_filename = os.path.join(directory_annotations, a_filename)
                 print(a_filename)
                 print(a_path_filename)
-                print('HERE WE MIGRATE TO .XML') # todo: check this and improve it
+                print('HERE WE MIGRATE TO .XML')  # todo: check this and improve it
                 print('self.dataset_config.dataset_name', self.dataset_config.dataset_name)
                 print('self.dataset_config.base_path', self.dataset_config.base_path)
                 base_path = os.path.join(self.dataset_config.base_path)
@@ -544,9 +545,9 @@ class GUIFrameExtractorConsole2(tk.Tk):
                 directory_selected = os.path.join(base_path, dataset_name)
                 self.dataset_config = DatasetConfig(base_path, dataset_name)
                 dataset_manager_obj = DatasetManager(self.dataset_config)
-                label_filename = 'labelmap_apples_id.json' # TODO: create a basic .json
+                label_filename = 'labelmap_apples_id.json'  # TODO: create a basic .json
                 label_json_path = os.path.join(base_path, dataset_name, 'preprocessed_data', label_filename)
-                #dataset_manager_obj.create_XML_files(label_json_path)
+                # dataset_manager_obj.create_XML_files(label_json_path)
                 dataset_manager_obj.create_labeled_XML_files()
                 results_info_str = f" .xml files migrated"
         # ----------------------------------------
@@ -554,14 +555,13 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.messages_info.insert("end", analyze_status_str)
         self.results_info.insert("end", ".xml files migrated " + results_info_str)
 
-
     def select_file_data(self):
         analyze_status_str = ""
 
         path_filename_selected = filedialog.askopenfilename(initialdir=self.input_folder_entry, title="Select a File",
                                                             filetypes=(
-                                                            ("Text files", self.r_config.file_extension_to_search),
-                                                            ("all files", "*.mkv")))
+                                                                ("Text files", self.r_config.file_extension_to_search),
+                                                                ("all files", "*.mkv")))
 
         if path_filename_selected == "":
             analyze_status_str = "A file has not been selected " + "\n"
@@ -581,6 +581,7 @@ class GUIFrameExtractorConsole2(tk.Tk):
     def extract_file_data(self):
         analyze_status_str = ""
         results_info_str = ""
+        results_info_str_3d = ""
         path_filename_selected = os.path.join(self.input_file_entry.get())
 
         if path_filename_selected == "":
@@ -595,17 +596,23 @@ class GUIFrameExtractorConsole2(tk.Tk):
             # TODO: 15/02/2022 temporal
             self.frames_extractor_config.path_annotations_output = self.dataset_config.dataset_annotations_path
             print(self.current_path_entry.get())
-            track_file = os.path.join(self.dataset_config.dataset_sets_path, 'all.txt') # todo: check error with this 19/05/2022
-            # ------------------------
-            frames_extractor_obj = FramesVideoManager(self.frames_extractor_config, an_input_file)
-            [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_files(track_file, an_offset,
+            track_file = os.path.join(self.dataset_config.dataset_sets_path,
+                                      'all.txt')  # todo: check error with this 19/05/2022
+            # -------------------------
+            if self.rgb_check_var.get() == 1:
+                pass
+                # ------------------------
+                frames_extractor_obj = FramesVideoManager(self.frames_extractor_config, an_input_file)
+                [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_files(track_file, an_offset,
                                                                                                   a_number_of_frames)
-            results_info_str = f"frames written {frames_written} errors {errors} output folder {output_folder}"
-
-            # 19/05/2022 todo add option checkers
-            self.frames_extractor_config.path_mesh_output = self.dataset_config.dataset_cloud_points_path
-            [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_colorized_mesh(an_offset, a_number_of_frames)
-            results_info_str_3d = f"frames written {frames_written} errors {errors} output folder {output_folder}"
+                results_info_str = f"frames written {frames_written} errors {errors} output folder {output_folder}"
+            # -------------------------
+            if self.cloud_points_check_var.get() == 1:
+                # 19/05/2022 todo add option checkers
+                self.frames_extractor_config.path_mesh_output = self.dataset_config.dataset_cloud_points_path
+                [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_colorized_mesh(
+                    an_offset, a_number_of_frames)
+                results_info_str_3d = f"frames written {frames_written} errors {errors} output folder {output_folder}"
 
         # ----------------------------------------
         analyze_status_str = path_filename_selected + "\n"
