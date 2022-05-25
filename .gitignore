@@ -9,3 +9,4 @@
 *.mkv
 *.iml
 .dist/*
+.build/*
