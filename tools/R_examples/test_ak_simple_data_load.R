@@ -7,7 +7,7 @@
 #  ===================================================
 #  This example shows how to load infrarred and depth data extracted from 
 #  videos in .mkv format using AK_FRAME_EXTRACTOR and its subsequent use in 
-#  MATLABs scripts as .mat files.
+#  R scripts as .mat files.
 #  setting environment
 
 #install.packages("here")

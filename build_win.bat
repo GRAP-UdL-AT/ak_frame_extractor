@@ -1,4 +1,11 @@
 @ echo off
+REM Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+REM
+REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
+REM  * GRAP http://www.grap.udl.cat/
+REM
+REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+
 SET APPLICATION_FOLDER_MAIN=ak_frame_extractor
 SET APPLICATION_FOLDER_OUT=ak_frame_extractor_f
 SET APPLICATION_PATH=%~dp0

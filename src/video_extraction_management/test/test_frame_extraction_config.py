@@ -1,6 +1,10 @@
 """
-Project: Fruit Size Estimation
-Author: Juan Carlos Miranda
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: November 2021
 Description:
 Example taken from https://docs.python.org/3/library/unittest.html
@@ -8,7 +12,10 @@ Example taken from https://docs.python.org/3/library/unittest.html
 ...
 
 Use: python -m unittest tests/test_something.py
+
 """
+
+
 import unittest
 import os
 from video_extraction_management.frame_extraction_config import FramesManagerConfig

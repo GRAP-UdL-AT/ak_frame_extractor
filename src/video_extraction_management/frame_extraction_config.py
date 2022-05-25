@@ -1,8 +1,12 @@
 """
-# Project: Fruit Size Estimation
-# Author: Juan Carlos Miranda
-# Date: November 2021
-# Description:
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+Date: November 2021
+Description:
   This file contains config used in frame extraction
 
 Usage:
@@ -11,6 +15,7 @@ Usage:
     frames_extractor_config_obj = FramesManagerConfig(path_extractor_config_file)
 
 """
+
 import logging
 import configparser
 import os

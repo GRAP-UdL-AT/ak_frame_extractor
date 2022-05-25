@@ -1,17 +1,21 @@
 """
-Project: Fruit Size Estimation
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: November 2021
 Description:
-
-User interface that contains functions related to extracting video data from the Azure Kinect camera.
+    User interface that contains functions related to extracting video data from the Azure Kinect camera.
 
 Use:
- python ak_frame_extractor.py #
+    python ak_frame_extractor.py
+
 """
 
-import os
-import logging
+# import os
+# import logging
 
 from os.path import expanduser
 from helpers.helper_filesystem import *

@@ -1,16 +1,23 @@
 """
-Project: Fruit Size Estimation
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: November 2021
 Description:
 
 Use:
-from gui_frame_ext.about_window import AboutWindow
+    from gui_frame_ext.about_window import AboutWindow
 
     def open_about_data(self):
         about_windows = AboutWindow(self)
         about_windows.grab_set()
+
 """
+
+
 import os
 import tkinter as tk
 from gui_frame_ext.gui_frame_ext_config import GUIFrameExtractorConfig2

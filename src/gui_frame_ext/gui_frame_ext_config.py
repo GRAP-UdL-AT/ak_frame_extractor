@@ -1,15 +1,19 @@
 """
-Project: Fruit Size Estimation
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: November 2021
 Description:
-Manage configurations of user interface
+    Manage configurations of user interface
 Use:
-
     ui_path_config_file = os.path.join(BASE_DIR, 'conf', 'ui_frames_extractor.conf')
     ui_frame_extractor_config = GUIFrameExtractorConfig(ui_path_config_file)
 
 """
+
 
 import os
 from os.path import expanduser

@@ -14,10 +14,14 @@ After that, follow the steps according to your operating system.
 
 ## Installing with virtual environments
 ### Installing Linux (TODO)
+Install packages in Ubuntu 20.04
+```
+sudo apt install python3-tk
+```
+Create virtual environment.
 ```
 python3 -m venv ./ak_frame_extractor-venv
 source ./ak_frame_extractor-venv/bin/activate
-https://opencv.org/opencv-4-5-5/
 pip install -r requirements_linux.txt
 ```
 

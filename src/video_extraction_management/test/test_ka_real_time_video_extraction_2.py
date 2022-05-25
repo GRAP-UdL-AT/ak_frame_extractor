@@ -1,8 +1,12 @@
 """
-# Project: Fruit Size Estimation
-# Author: Juan Carlos Miranda
-# Date: November 2021
-# Description:
+Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+Date: November 2021
+Description:
   Test for methods used for in extraction from Matroska files
   Iterate over a group of recorded frames in a video.
 
@@ -13,6 +17,7 @@ Usage:
 python -m unittest $HOME/development/KA_detector/video_extraction_management/test/test_ka_real_time_video_extraction.py
 
 """
+
 import unittest
 import os
 from os.path import expanduser
