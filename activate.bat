@@ -1,4 +1,12 @@
 @echo off
+REM Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+REM
+REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
+REM  * GRAP http://www.grap.udl.cat/
+REM
+REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+
+set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\MY_FOLDER_HERE\ka_frame_extractor
 
 rem This file is UTF-8 encoded, so we need to update the current code page while executing it
 for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (
@@ -7,8 +15,6 @@ for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (
 if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
-
-set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\MY_FOLDER_HERE\ka_frame_extractor
 
 if not defined PROMPT set PROMPT=$P$G
 
