@@ -17,6 +17,9 @@ Use:
 
 import os
 from os.path import expanduser
+import sys
+sys.path.append(os.path.join(os.path.abspath('.'), 'src'))
+
 from src.gui_frame_ext.gui_frame_ext_console import GUIFrameExtractorConsole2
 from src.gui_frame_ext.gui_frame_ext_config import GUIFrameExtractorConfig2
 

@@ -21,7 +21,7 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 ## Functionalities
 The functionalities of the software are briefly described.
 * **[Dataset creation]**  This option creates a hierarchy of metadata. This hierarchy contains sub-folders that will be used to store the extracted data.
-* **[Data Extraction]** The user can configure parameters to extract dataframes from videos, such: output folder, number of frames to extract. 
+* **[Data Extraction]** The user can configure the parameters for extracting data frames from videos, such as: output folder, number of frames to extract. The extraction can be done from one video or by processing a whole folder in batch mode. 
 * **[Data Migration]**  In this tab, we offer a tool for data migration in object labelling tasks. It is used to convert files from .CSV format (generated with [Pychet Labeller](https://github.com/acfr/pychetlabeller)) to [PASCALVOC](https://roboflow.com/formats/pascal-voc-xml) format.
 
 * Data extracted and 3D cloud points can be retrieved from *"your dataset metadata folder"**.
