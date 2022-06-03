@@ -79,7 +79,7 @@ Folder description:
 |---------------------------|-------------------------|
 | docs/ | Documentation |
 | src/ | Source code |
-| win_exe_conf/ | Specifications for building .exe files with Pyinstaller.|
+| win_exe_conf/ | Specifications for building .exe files with [Pyinstaller](https://pyinstaller.org)..|
 | tools/ | Examples of code to use data migrated. We offer scripts in MATLAB, Python, R. |
 | data/ | Video files recorded with Azure Kinect. |
 | . | . |
