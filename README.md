@@ -6,11 +6,11 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 
 ## Contents
 
-1. Pre-requisites
-2. Functionalities
-3. Install
-4. Files and folder description
-5. Development tools and environment
+1. Pre-requisites.
+2. Functionalities.
+3. Install and run.
+4. Files and folder description.
+5. Development tools and environment.
 
 ## 1. Pre-requisites
 
@@ -20,7 +20,8 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 * [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow
   this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
-* In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
+* In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
+  in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
 
 ## 2. Functionalities
 
@@ -37,38 +38,39 @@ The functionalities of the software are briefly described.
 
 * Data extracted and 3D cloud points can be retrieved from *"your dataset metadata folder"**.
 
-## 3. Install
+## 3. Install and run
+
+* [Linux]
+  Enter to the folder "ak_frame_extractor/"
+
+Create virtual environment(only first time)
 
 ```
-python ak_frame_extractor_main.py
+./creating_evn_ak_frame_extractor.sh
 ```
 
-## 4. Run
+Run script.
 
 ```
-python ak_frame_extractor_main.py
+./ak_frame_extractor_start.sh
 ```
 
-### Windows (TODO)
+* [Windows]
+  Enter to the folder "ak_frame_extractor/"
 
-Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
+Create virtual environment(only first time)
 
-### Linux (TODO)
+```
+TODO_HERE
+```
 
-..
+Run script from CMD.
 
-## Package distribution format
+```
+./ak_frame_extractor_start.bat
+```
 
-Explain about packages distribution.
-
-| Package type | Package |  Url |  Description | 
-|--------------|---------|------|------| 
-| Windows      | .EXE    | .EXE | Executables are stored under build/ | 
-| Linux        | .deb    | .deb | NOT IMPLEMENTED YET| 
-| PIP          | .whl    | .whl | PIP packages are stored in build/ | 
-| . | . | . |
-
-## Files and folder description
+## 4.3 Files and folder description
 
 Folder description:
 
@@ -85,31 +87,33 @@ Files description:
 
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
-| activate.bat | Activate environments in Windows | WIN |
+| activate_env.bat | Activate environments in Windows | WIN |
 | clean_files.bat | Clean files under CMD. | WIN |
 | ak_sm_recorder_main.bat | Executing main script | WIN |
 | build_pip.bat | Build PIP package to distribution | WIN |
 | build_win.bat | Build .EXE for distribution | WIN |
+| creating_env_ak_frame_extractor.sh | Automatically creates Python environments | Linux |
+| ak_frame_extractor_start.sh | Executing main script | Linux |
 | /src/ak_frame_extractor/__main__.py | Main function used in package compilation | Supported by Python |
 | /ak_frame_extractor_main.py | Python main function | Supported by Python |
 | setup.cfg | Package configuration PIP| Supported by Python |
 | pyproject.toml | Package description pip| Supported by Python |
-| . | . | . |
 
-## Development tools and environment
+## 5. Development tools and environment
+Some development tools are needed with this package, listed below:
 
 * [Pyinstaller](https://pyinstaller.org).
 * [Opencv](https://opencv.org/).
 * [Curses for Python](https://docs.python.org/3/howto/curses.html) ```pip install windows-curses```.
 * [7zip](https://7ziphelp.com/).
 
-### Notes for developers
+### 5.1 Notes for developers
 
 You can use the __main__.py for execute as first time in src/ak_frame_extractor/_ _ main _ _.py Configure the path of
 the project, if you use Pycharm, put your folder root like this:
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/img/configuration_pycharm.png?raw=true)
 
-### Creating virtual environment Linux (TODO)
+### 5.2 Creating virtual environment Linux (TODO)
 
 ```
 python3 -m venv ./venv
@@ -118,7 +122,7 @@ pip install --upgrade pip
 pip install -r requirements_linux.txt
 ```
 
-### Creating virtual environment  Windows (TODO)
+### 5.3 Creating virtual environment  Windows (TODO)
 
 ```
 %userprofile%"\AppData\Local\Programs\Python\Python38\python.exe" -m venv ./venv
@@ -133,30 +137,38 @@ pip install -r requirements_win.txt
 pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC:\Program Files\Azure Kinect SDK v1.4.1\sdk\include" --global-option="-LC:\Program Files\Azure Kinect SDK v1.4.1\sdk\windows-desktop\amd64\release\lib"
 ```
 
-## Installing with PIP package
+## 5.4 Installing with PIP package
 
-### Build packages
+We are working to offer Pypi support for this package. At this time this software can be built by scripts automatically.
+
+### 5.4.1 Build packages
 
 ```
 py -m pip install --upgrade build
 build_pip.bat
 ```
 
-### Download PIP package
+### 5.4.2 Download PIP package
 
 ```
 pip install package.whl
 ```
 
-### Run ak_frame_extractor
+### 5.4.3 Run ak_frame_extractor
 
 ```
 python -m ak_frame_extractor.py
 ```
 
-### Running software
+## Package distribution format
 
-TODO_ADD_HERE_TEXT
+Explain about packages distribution.
+
+| Package type | Package |  Url |  Description | 
+|--------------|---------|------|------| 
+| Windows      | .EXE    | .EXE | Executables are stored under build/ | 
+| Linux        | .deb    | .deb | NOT IMPLEMENTED YET| 
+| PIP          | .whl    | .whl | PIP packages are stored in build/ |
 
 ## Authorship
 
