@@ -20,8 +20,7 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 * [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow
   this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
-* In Ubuntu 20.04, we offer an script for install camera drivers by following the instructions
-  at [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
+* In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
 
 ## 2. Functionalities
 
