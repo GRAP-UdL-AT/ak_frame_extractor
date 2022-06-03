@@ -33,6 +33,7 @@
 
 ## Package systems
 * Add pip support.
+* Publish PIP package.
 * Add compilation to .exe
 * Add installer for Linux, a .sh to executes like .bat in Windows.
 ~~* .EXE builder~~
