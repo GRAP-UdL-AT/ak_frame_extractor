@@ -42,12 +42,12 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/
 ## 3. Install and run
 
 * [Linux]
-  Enter to the folder "ak_frame_extractor/"
+  Enter to the folder **"ak_frame_extractor/"**
 
 Create virtual environment(only first time)
 
 ```
-./creating_evn_ak_frame_extractor.sh
+./creating_env_ak_frame_extractor.sh
 ```
 
 Run script.
