@@ -10,7 +10,7 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 2. Functionalities.
 3. Install and run.
 4. Files and folder description.
-5. Development tools and environment.
+5. Development tools, environment, build executables.
 
 ## 1. Pre-requisites
 
@@ -25,7 +25,8 @@ Python-based GUI tool to extract frames from video files produced with Azure Kin
 
 ## 2. Functionalities
 
-The functionalities of the software are briefly described.
+The functionalities of the software are briefly described. Supplementary material can be
+found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/USER_MANUAL_ak_frame_extractor_v1.md).
 
 * **[Dataset creation]**  This option creates a hierarchy of metadata. This hierarchy contains sub-folders that will be
   used to store the extracted data.
@@ -99,7 +100,8 @@ Files description:
 | setup.cfg | Package configuration PIP| Supported by Python |
 | pyproject.toml | Package description pip| Supported by Python |
 
-## 5. Development tools and environment
+## 5. Development tools, environment, build executables
+
 Some development tools are needed with this package, listed below:
 
 * [Pyinstaller](https://pyinstaller.org).
@@ -113,7 +115,7 @@ You can use the __main__.py for execute as first time in src/ak_frame_extractor/
 the project, if you use Pycharm, put your folder root like this:
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/img/configuration_pycharm.png?raw=true)
 
-### 5.2 Creating virtual environment Linux (TODO)
+### 5.2 Creating virtual environment Linux
 
 ```
 python3 -m venv ./venv
@@ -122,13 +124,13 @@ pip install --upgrade pip
 pip install -r requirements_linux.txt
 ```
 
-### 5.3 Creating virtual environment  Windows (TODO)
+### 5.3 Creating virtual environment  Windows
 
 ```
 %userprofile%"\AppData\Local\Programs\Python\Python38\python.exe" -m venv ./venv
 venv\Scripts\activate.bat
 pip install --upgrade pip
-pip install -r requirements_win.txt
+pip install -r requirements_windows.txt
 ```
 
 ** If there are some problems in Windows, follow [this](https://github.com/etiennedub/pyk4a/) **
@@ -137,7 +139,7 @@ pip install -r requirements_win.txt
 pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC:\Program Files\Azure Kinect SDK v1.4.1\sdk\include" --global-option="-LC:\Program Files\Azure Kinect SDK v1.4.1\sdk\windows-desktop\amd64\release\lib"
 ```
 
-## 5.4 Installing with PIP package
+## 5.4 Building PIP package
 
 We are working to offer Pypi support for this package. At this time this software can be built by scripts automatically.
 
@@ -160,7 +162,16 @@ pip install package.whl
 python -m ak_frame_extractor.py
 ```
 
-## Package distribution format
+## 5.4 Building .EXE for Windows 10
+
+```
+build_win.bat
+```
+
+After the execution of the script, a new folder will be generated inside the project **"/dist"**. You can copy **
+ak_frame_extracted_f/** or a compressed file **"ak_frame_Extractor_f.zip"** to distribute.
+
+### 5.6 Package distribution format
 
 Explain about packages distribution.
 
