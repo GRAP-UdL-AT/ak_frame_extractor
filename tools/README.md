@@ -36,7 +36,7 @@ in MATLABs scripts as .mat files. Having given frames (RGB and depth data) extra
 depth threshold value to obtain a segmented RGB fruit image.
 
 Original
-Image ![alt text](https://github.com/GRAP-UdL-AT/ka_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
+Image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
 
 Segmented
-image ![alt text](https://github.com/GRAP-UdL-AT/ka_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1.jpg?raw=true)
+image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1.jpg?raw=true)
