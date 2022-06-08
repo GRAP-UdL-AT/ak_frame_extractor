@@ -41,6 +41,22 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/
 
 ## 3. Install and run
 
+### 3.1 PIP quick install package
+
+Create your Python virtual environment.
+
+```
+python3 -m venv ./ak_frame_extractor_venv
+source ./ak_frame_extractor_venv/bin/activate
+pip install --upgrade pip
+
+pip install python -m ak-frame-extractor
+python -m ak_sm_recorder
+python -m ak_frame_extractor
+```
+
+### 3.2 Install and run virtual environments using scripts provided
+
 * [Linux]
   Enter to the folder **"ak_frame_extractor/"**
 
