@@ -21,6 +21,8 @@ at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-fr
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
 * In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
   in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
+* Download video samples (optional) from [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://doi.org/10.5281/zenodo.6968103)
+
 
 ## 2. Functionalities
 
@@ -95,7 +97,7 @@ Folder description:
 | src/ | Source code |
 | win_exe_conf/ | Specifications for building .exe files with [Pyinstaller](https://pyinstaller.org)..|
 | tools/ | Examples of code to use data migrated. We offer scripts in MATLAB, Python, R. |
-| data/ | Video files recorded with Azure Kinect. |
+| data/ | Data files extracted using AK_FRAEX. |
 | . | . |
 
 Files description:
