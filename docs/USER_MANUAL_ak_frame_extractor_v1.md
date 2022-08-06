@@ -9,19 +9,16 @@ We offer video samples to test the use of AK_FRAEX software. Please download vid
 ## 2. Creating a dataset metadata
 Using the downloaded videos, in the previous step proceed to create a dataset metadata.
 
-https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
-![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/dataset_creation.gif?raw=true)
+![dataset_creation.gif](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/dataset_creation.gif?raw=true)
 
 
 ## 3. Extracting data from a .mkv file
 Example of extraction data from .mkv (Matroska) video file.
 
-https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
-![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/file_extraction.gif?raw=true)
+![file_extraction.gif](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/file_extraction.gif?raw=true)
 
 
 ## 4. Extracting data from a folder with several .mkv files
 In this example is showed how to extract data from several videos in .mkv format (Matroska).
 
-https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
-![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/folder_extraction.gif?raw=true)
+![folder_extraction.gif](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/folder_extraction.gif?raw=true)
