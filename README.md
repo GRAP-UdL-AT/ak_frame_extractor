@@ -15,8 +15,6 @@ at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-fr
 
 ## 1. Pre-requisites
 
-* Azure Kinect DK camera connected to the computer. Specifications can be seen in
-  the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
 * [SDK Azure Kinect](https://docs.microsoft.com/es-es/azure/kinect-dk/set-up-azure-kinect-dk) installed.
 * [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow
   this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with

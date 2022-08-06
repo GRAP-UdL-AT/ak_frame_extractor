@@ -1,23 +1,26 @@
 # USER's Manual
 Tool for extracting frames from video files produced with Azure Kinect cameras.
 
-* [GRAP-UdL-AT/ka_frame_extractor](https://github.com/GRAP-UdL-AT/ka_frame_extractor)
+* [GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_frame_extractor)
 
-## Creating a dataset metadata
-Example of dataset creation metadata.
+## 1. Download demo videos
+We offer video samples to test the use of AK_FRAEX software. Please download videos from [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://doi.org/10.5281/zenodo.6968103)
+
+## 2. Creating a dataset metadata
+Using the downloaded videos, in the previous step proceed to create a dataset metadata.
 
 https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
 ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/dataset_creation.gif?raw=true)
 
 
-## Extracting data from a .mkv file
+## 3. Extracting data from a .mkv file
 Example of extraction data from .mkv (Matroska) video file.
 
 https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
 ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/screen_animations/file_extraction.gif?raw=true)
 
 
-## Extracting data from a folder with several .mkv files
+## 4. Extracting data from a folder with several .mkv files
 In this example is showed how to extract data from several videos in .mkv format (Matroska).
 
 https://github.com/GRAP-UdL-AT/ka_frame_extractor/docs
