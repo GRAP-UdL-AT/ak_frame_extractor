@@ -1,4 +1,4 @@
-# AK_FRAEX - USER's Manual
+# AK_FRAEX - User's Manual
 Tool for extracting frames from video files produced with Azure Kinect cameras.
 
 * [GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_frame_extractor)
