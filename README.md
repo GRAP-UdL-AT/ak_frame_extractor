@@ -93,11 +93,11 @@ Folder description:
 
 | Folders                    | Description            |
 |---------------------------|-------------------------|
-| docs/ | Documentation |
-| src/ | Source code |
-| win_exe_conf/ | Specifications for building .exe files with [Pyinstaller](https://pyinstaller.org)..|
-| tools/ | Examples of code to use data migrated. We offer scripts in MATLAB, Python, R. |
-| data/ | Examples of output produced by AK_FRAEX, data extracted from recorded video. |
+| [docs/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/docs) | Documentation |
+| [src/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/src) | Source code |
+| [win_exe_conf/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/win_exe_conf) | Specifications for building .exe files with [Pyinstaller](https://pyinstaller.org)..|
+| [tools/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/tools) | Examples of code to use data migrated. We offer scripts in MATLAB, Python, R. |
+| [data/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/data) | Examples of output produced by AK_FRAEX, data extracted from recorded video. |
 | . | . |
 
 Files description:
