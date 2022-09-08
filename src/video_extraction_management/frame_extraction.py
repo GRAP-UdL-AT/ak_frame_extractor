@@ -15,7 +15,7 @@ Usage:
     path_extractor_config_file = os.path.join(BASE_DIR, 'conf', 'frames_extractor.conf')
     frames_extractor_config_obj = FramesManagerConfig(path_extractor_config_file)
     frames_extractor_obj = FramesVideoManager(frames_extractor_config_obj)
-    #remote_obj.run()
+    [frames_written, errors, output_folder] = frames_extractor_obj.export_frames_to_files(track_file, an_offset, a_number_of_frames)
 
 """
 
