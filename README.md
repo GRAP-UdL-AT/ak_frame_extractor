@@ -205,7 +205,15 @@ bugs juancarlos.miranda@udl.cat
 ## Citation
 
 If you find this code useful, please consider citing:
-[GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_frame_extractor/).
+
+```
+@article{SURNAME_YEAR,
+    Author = {Miranda, Juan Carlos and Gen{\'e}-Mola, Jordi and Arn{\'o}, Jaume and Gregorio, Eduard},
+    Title = {AKFruitData: a dual software application for Azure Kinect cameras to acquire and extract informative data in yield tests performed in fruit orchard environments},
+    Journal = {Submitted},
+    Year = {YEAR}
+}
+```
 
 ## Acknowledgements
 
@@ -218,3 +226,10 @@ of Jordi Gené-Mola was supported by the Spanish Ministry of Universities throug
 funded by the European Union - NextGenerationEU. The authors would also like to thank the Institut de Recerca i
 Tecnologia Agroalimentàries (IRTA) for allowing the use of their experimental fields, and in particular Dr. Luís Asín
 and Dr. Jaume Lordán who have contributed to the success of this work.
+
+
+<img src="https://github.com/GRAP-UdL-AT/ak_acquisition_system/blob/main//docs/img/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
+&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main//docs/img/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
+&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
+&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
+&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_AGAUR.png" height="60px" alt="AGAUR"/>
