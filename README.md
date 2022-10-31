@@ -224,19 +224,20 @@ abstract = {The emergence of low-cost 3D sensors, and particularly RGB-D cameras
 
 ## Acknowledgements
 
-This work was funded by the Spanish Ministry of Science and Innovation and the Spanish Estate Research Agency through
-grant RTI2018-094222-B-I00 (PAgFRUIT project). This work was also supported by the Secretaria d’Universitats i Recerca
-del Departament d’Empresa i Coneixement de la Generalitat de Catalunya under Grant 2017-SGR-646. The Secretariat of
-Universities and Research of the Department of Business and Knowledge of the Generalitat de Catalunya and Fons Social
-Europeu (FSE) are also thanked for financing Juan Carlos Miranda’s pre-doctoral fellowship (2020 FI_B 00586). The work
-of Jordi Gené-Mola was supported by the Spanish Ministry of Universities through a Margarita Salas postdoctoral grant
-funded by the European Union - NextGenerationEU. The authors would also like to thank the Institut de Recerca i
-Tecnologia Agroalimentàries (IRTA) for allowing the use of their experimental fields, and in particular Dr. Luís Asín
-and Dr. Jaume Lordán who have contributed to the success of this work.
+This work is a result of the RTI2018-094222-B-I00 project (PAgFRUIT) granted by MCIN/AEI and by the European Regional
+Development Fund (ERDF). This work was also supported by the Secretaria d’Universitats i Recerca del Departament
+d’Empresa i Coneixement de la Generalitat de Catalunya under Grant 2017-SGR-646. The Secretariat of Universities and
+Research of the Department of Business and Knowledge of the Generalitat de Catalunya and Fons Social Europeu (FSE) are
+also thanked for financing Juan Carlos Miranda’s pre-doctoral fellowship (2020 FI_B 00586). The work of Jordi Gené-Mola
+was supported by the Spanish Ministry of Universities through a Margarita Salas postdoctoral grant funded by the
+European Union - NextGenerationEU. The authors would also like to thank the Institut de Recerca i Tecnologia
+Agroalimentàries (IRTA) for allowing the use of their experimental fields, and in particular Dr. Luís Asín and Dr. Jaume
+Lordán who have contributed to the success of this work.
 
 
-<img src="https://github.com/GRAP-UdL-AT/ak_acquisition_system/blob/main//docs/img/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
-&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main//docs/img/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_PAgFRUIT" height="60px" alt="PAgFRUIT Research Project"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
+&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
 &nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
 &nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
 &nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_AGAUR.png" height="60px" alt="AGAUR"/>
