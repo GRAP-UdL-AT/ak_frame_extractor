@@ -207,11 +207,18 @@ bugs juancarlos.miranda@udl.cat
 If you find this code useful, please consider citing:
 
 ```
-@article{SURNAME_YEAR,
-    Author = {Miranda, Juan Carlos and Gen{\'e}-Mola, Jordi and Arn{\'o}, Jaume and Gregorio, Eduard},
-    Title = {AKFruitData: a dual software application for Azure Kinect cameras to acquire and extract informative data in yield tests performed in fruit orchard environments},
-    Journal = {Submitted},
-    Year = {YEAR}
+@article{MIRANDA2022101231,
+title = {AKFruitData: A dual software application for Azure Kinect cameras to acquire and extract informative data in yield tests performed in fruit orchard environments},
+journal = {SoftwareX},
+volume = {20},
+pages = {101231},
+year = {2022},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2022.101231},
+url = {https://www.sciencedirect.com/science/article/pii/S2352711022001492},
+author = {Juan Carlos Miranda and Jordi Gené-Mola and Jaume Arnó and Eduard Gregorio},
+keywords = {RGB-D camera, Data acquisition, Data extraction, Fruit yield trials, Precision fructiculture},
+abstract = {The emergence of low-cost 3D sensors, and particularly RGB-D cameras, together with recent advances in artificial intelligence, is currently driving the development of in-field methods for fruit detection, size measurement and yield estimation. However, as the performance of these methods depends on the availability of quality fruit datasets, the development of ad-hoc software to use RGB-D cameras in agricultural environments is essential. The AKFruitData software introduced in this work aims to facilitate use of the Azure Kinect RGB-D camera for testing in field trials. This software presents a dual structure that addresses both the data acquisition and the data creation stages. The acquisition software (AK_ACQS) allows different sensors to be activated simultaneously in addition to the Azure Kinect. Then, the extraction software (AK_FRAEX) allows videos generated with the Azure Kinect camera to be processed to create the datasets, making available colour, depth, IR and point cloud metadata. AKFruitData has been used by the authors to acquire and extract data from apple fruit trees for subsequent fruit yield estimation. Moreover, this software can also be applied to many other areas in the framework of precision agriculture, thus making it a very useful tool for all researchers working in fruit growing.}
 }
 ```
 
