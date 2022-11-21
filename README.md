@@ -20,7 +20,7 @@ at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-fr
   this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
 * In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
-  in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
+  in [azure_kinect_notes](https://github.com/GRAP-UdL-AT/ak_acquisition_system/tree/main/docs/azure_kinect_notes/).
 * Videos recorded with the Azure Kinect camera, optional video samples are available at [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://doi.org/10.5281/zenodo.6968103)
 
 
@@ -237,7 +237,7 @@ Lordán who have contributed to the success of this work.
 
 <img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_PAgFRUIT.png" height="60px" alt="PAgFRUIT Research Project"/>
 <img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
-&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
-&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
-&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
-&nbsp;&nbsp;&nbsp;<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_AGAUR.png" height="60px" alt="AGAUR"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
+<img src="https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/logo_AGAUR.png" height="60px" alt="AGAUR"/>
