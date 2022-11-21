@@ -52,8 +52,11 @@ class AboutWindow2(tk.Toplevel):
                           f'PAgFRUIT project RTI2018-094222-B-I00\n' \
                           f'http://www.pagfruit.udl.cat/\n' \
                           f' \n' \
-                          f'Research Group in AgroICT & Precision Agriculture\n' \
+                          f'Research Group on AgroICT & Precision Agriculture\n' \
+                          f'GRAP Universitat de Lleida / Agrotecnio - CERCA Center\n' \
                           f'https://www.grap.udl.cat/\n'
+
+
 
         text_info['text'] = about_text_info
         text_info.pack(anchor=tk.CENTER)

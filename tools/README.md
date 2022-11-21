@@ -20,9 +20,9 @@ This example shows how to load infrared and depth data extracted from videos in 
 its subsequent use in MATLABs scripts as .mat files.
 
 DEPTH
-data ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/DEPTH_data_exported.png?raw=true)
+data ![DEPTH_data_exported.png](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/DEPTH_data_exported.png?raw=true)
 
-IR data ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/IR_data_exported.png?raw=true)
+IR data ![IR_data_exported.png](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/IR_data_exported.png?raw=true)
 
 ## Example 2) MATLAB - Load .mat file exported from a dataset created.
 
@@ -35,10 +35,10 @@ in MATLABs scripts as .mat files. Having given frames (RGB and depth data) extra
 depth threshold value to obtain a segmented RGB fruit image.
 
 Original
-Image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
+Image ![20210927_114012_k_r2_e_000_150_138_2_0_C.png](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
 
 Segmented
-image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1.jpg?raw=true)
+image ![20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1.jpg](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1.jpg?raw=true)
 
 ## Example 3) Python - Load .mat file exported from a dataset created.
 
@@ -51,14 +51,14 @@ test_ak_data_extracted.py
 ```
 
 Original
-Image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
+Image ![20210927_114012_k_r2_e_000_150_138_2_0_C.png](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png?raw=true)
 
 Segmented
-image ![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1_p.jpg?raw=true)
+image ![20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1_p.jpg](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/tools/img/20210927_114012_k_r2_e_000_150_138_2_0_C.png_mask1_p.jpg?raw=true)
 
 ## Example 4) R - Load .mat file exported from a dataset created.
 
-This example shows how to load infrarred and depth data extracted from videos in .mkv format using AK_FRAME_EXTRACTOR
+This example shows how to load infrared and depth data extracted from videos in .mkv format using AK_FRAME_EXTRACTOR
 and its subsequent use in R scripts as .mat files.
 
 ```
