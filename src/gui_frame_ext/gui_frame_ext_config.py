@@ -24,7 +24,7 @@ class GUIFrameExtractorConfig2:
     app_title = 'AK Frame Extractor (AK_FRAEX) v1.0'
     width = 550
     height = 480
-    geometry_about = '320x480'
+    geometry_about = '380x480'
     geometry_main = '550x800' #'640x480'  # '320x480'
     file_extension_to_search = '.mkv'
     split_at_timestamp = 2  # time used to split files, values in seconds
