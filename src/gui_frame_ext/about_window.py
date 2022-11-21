@@ -53,7 +53,8 @@ class AboutWindow2(tk.Toplevel):
                           f'http://www.pagfruit.udl.cat/\n' \
                           f' \n' \
                           f'Research Group on AgroICT & Precision Agriculture\n' \
-                          f'GRAP Universitat de Lleida / Agrotecnio - CERCA Center\n' \
+                          f'GRAP Universitat de Lleida\n' \
+                          f'Agrotecnio - CERCA Center\n' \
                           f'https://www.grap.udl.cat/\n'
 
 
