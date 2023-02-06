@@ -101,20 +101,33 @@ Folder description:
 | . | . |
 
 Files description:
-
+Python environment.
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
 | activate_env.bat | Activate environments in Windows | WIN |
 | clean_files.bat | Clean files under CMD. | WIN |
-| ak_sm_recorder_main.bat | Executing main script | WIN |
-| build_pip.bat | Build PIP package to distribution | WIN |
-| build_win.bat | Build .EXE for distribution | WIN |
 | creating_env_ak_frame_extractor.sh | Automatically creates Python environments | Linux |
+| ak_sm_recorder_main.bat | Executing main script | WIN |
 | ak_frame_extractor_start.sh | Executing main script | Linux |
+| /ak_frame_extractor_main.py | Python main function | Supported by Python |
+
+Pyinstaller files:
+| Files                    | Description              | OS |
+|---------------------------|-------------------------|---|
+| build_win.bat | Build .EXE for distribution | WIN |
 | /src/ak_frame_extractor/__main__.py | Main function used in package compilation | Supported by Python |
 | /ak_frame_extractor_main.py | Python main function | Supported by Python |
+
+
+Pypi.org PIP packages
+| Files                    | Description              | OS |
+|---------------------------|-------------------------|---|
+| build_pip.bat | Build PIP package to distribution | WIN |
+| /src/ak_frame_extractor/__main__.py | Main function used in package compilation | Supported by Python |
 | setup.cfg | Package configuration PIP| Supported by Python |
-| pyproject.toml | Package description pip| Supported by Python |
+| pyproject.toml | Package description PIP| Supported by Python |
+
+
 
 ## 5. Development tools, environment, build executables
 
