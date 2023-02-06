@@ -100,8 +100,8 @@ Folder description:
 | [data/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/tree/main/data) | Examples of output produced by AK_FRAEX, data extracted from recorded video. |
 | . | . |
 
-Files description:
-Python environment.
+Python environment files:
+
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
 | activate_env.bat | Activate environments in Windows | WIN |
@@ -119,7 +119,7 @@ Pyinstaller files:
 | /ak_frame_extractor_main.py | Python main function | Supported by Python |
 
 
-Pypi.org PIP packages
+Pypi.org PIP packages files:
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
 | build_pip.bat | Build PIP package to distribution | WIN |
