@@ -12,7 +12,7 @@
 % Segmentation using depth information and thresholds
 % ===================================================
 % This example shows how to load data extracted from videos in .mkv format 
-% using KA_FRAME_EXTRACTOR and its subsequent use in MATLABs scripts as 
+% using AK_FRAME_EXTRACTOR and its subsequent use in MATLABs scripts as
 % .mat files.
 % Having given frames (RGB and depth data) extracted from video files, it 
 % is filtered by depth threshold value to obtain an RGB fruit image.

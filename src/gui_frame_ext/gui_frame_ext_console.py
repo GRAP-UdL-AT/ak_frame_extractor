@@ -102,7 +102,7 @@ class GUIFrameExtractorConsole2(tk.Tk):
         self.geometry(self.r_config.geometry_main)
         self.title(r_config.app_title)
         self.attributes('-topmost', True)
-        #self.attributes('-fullscreen', True)
+        # self.attributes('-fullscreen', True)
         self.state('normal')
         assets_path = os.path.dirname(os.path.abspath(__file__))
         img_path = os.path.join(assets_path, 'assets', 'icon_app.png')
@@ -230,10 +230,10 @@ class GUIFrameExtractorConsole2(tk.Tk):
         # todo: 19/05/2022, deactivated because it will be implemented in the near future
         self.rgb_check = tk.Checkbutton(self.data_options_frame, text='RGB, Depth, IR', variable=self.rgb_check_var)
         self.rgb_check.grid(row=3, column=2, sticky=tk.W, ipadx=3, ipady=3)
-        #self.depth_check = tk.Checkbutton(self.data_options_frame, text='Depth', variable=self.depth_check_var)
-        #self.depth_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
-        #self.ir_check = tk.Checkbutton(self.data_options_frame, text='IR', variable=self.ir_check_var)
-        #self.ir_check.grid(row=3, column=4, sticky=tk.W, ipadx=3, ipady=3)
+        # self.depth_check = tk.Checkbutton(self.data_options_frame, text='Depth', variable=self.depth_check_var)
+        # self.depth_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)
+        # self.ir_check = tk.Checkbutton(self.data_options_frame, text='IR', variable=self.ir_check_var)
+        # self.ir_check.grid(row=3, column=4, sticky=tk.W, ipadx=3, ipady=3)
         self.cloud_points_check = tk.Checkbutton(self.data_options_frame, text='Cloud points',
                                                  variable=self.cloud_points_check_var)
         self.cloud_points_check.grid(row=3, column=3, sticky=tk.W, ipadx=3, ipady=3)

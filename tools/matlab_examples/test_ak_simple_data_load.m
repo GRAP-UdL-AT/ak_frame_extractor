@@ -1,7 +1,13 @@
 % ------------------------------------------------------------------------
-% Project: Fruit Size Estimation
-% Author: https://github.com/juancarlosmiranda/
+%Project: AK_FRAEX Azure Kinect Frame Extractor https://github.com/GRAP-UdL-AT/ak_frame_extractor
+%
+%* PAgFRUIT http://www.pagfruit.udl.cat/en/
+%* GRAP http://www.grap.udl.cat/
+%
+%Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 % Date: April 2020
+%Description:
+%
 % ------------------------------------------------------------------------
 % Simple infrarred and depth data
 % ===================================================
