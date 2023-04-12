@@ -13,10 +13,6 @@ Use:
     python ak_frame_extractor.py
 
 """
-
-# import os
-# import logging
-
 from os.path import expanduser
 from helpers.helper_filesystem import *
 from gui_frame_ext.gui_frame_ext_console import GUIFrameExtractorConsole2
