@@ -9,6 +9,7 @@ REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 SET APPLICATION_FOLDER_MAIN=ak_frame_extractor
 SET APPLICATION_FOLDER_OUT=ak_frame_extractor_f
 SET APPLICATION_PATH=%~dp0
+SET VERSION=1.2
 
 SET CONF_NAME=*.conf
 SET PAHT_FOLDER_RELATIVE_CONF=src\%APPLICATION_FOLDER_MAIN%\conf\
@@ -32,5 +33,9 @@ ECHO %DESTINATION_FOLDER_ABSOLUTE_CONF%
 ECHO %PATH_ASSETS_FILE%
 ECHO %DESTINATION_FOLDER_ABSOLUTE_ASSETS%
 
-ECHO 'pip package is OK -- /dist/ak_frame_extractor_package-0.0.1-py3-none-any.whl'
+
 py -m build
+
+ECHO 'pip package is OK -- '/%DIST_FOLDER%/ak_frame_extractor_-%VERSION%'-py3-none-any.whl
+ECHO 'UPLOAD FOR TEST PACKAGE USING - twine upload --repository testpypi ./dist/*'
+ECHO 'UPLOAD FINAL PACKAGE USING - twine upload ./dist/* --verbose'

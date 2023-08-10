@@ -25,7 +25,7 @@ from gui_frame_ext.gui_frame_ext_config import GUIFrameExtractorConfig2
 
 class AboutWindow2(tk.Toplevel):
     title_str = 'AK Frame Extractor (AK_FRAEX)'
-    version_number_str = '1.0'
+    version_number_str = '1.2'
 
     def __init__(self, parent):
         super().__init__(parent)

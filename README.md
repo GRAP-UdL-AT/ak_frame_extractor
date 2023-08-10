@@ -21,7 +21,7 @@ at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-fr
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
 * In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
   in [azure_kinect_notes](https://github.com/GRAP-UdL-AT/ak_acquisition_system/tree/main/docs/azure_kinect_notes/).
-* Videos recorded with the Azure Kinect camera, optional video samples are available at [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://zenodo.org/record/6968103)
+* Videos recorded with the Azure Kinect camera, optional video samples are available at [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://zenodo.org/record/8232445)
 
 
 ## 2. Functionalities
