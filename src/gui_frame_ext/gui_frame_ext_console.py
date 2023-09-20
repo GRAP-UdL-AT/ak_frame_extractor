@@ -105,7 +105,7 @@ class GUIFrameExtractorConsole2(tk.Tk):
         # self.attributes('-fullscreen', True)
         self.state('normal')
         assets_path = os.path.dirname(os.path.abspath(__file__))
-        img_path = os.path.join(assets_path, 'assets', 'icon_app.png')
+        img_path = os.path.join(assets_path, 'assets', 'ak_fraex_32.png')
         self.iconphoto(False, tk.PhotoImage(file=img_path))
         # ---------------------------
         self.create_tabs()
@@ -536,8 +536,9 @@ class GUIFrameExtractorConsole2(tk.Tk):
             print('annotations', self.dataset_config.dataset_annotations_path)
             print('square', self.dataset_config.dataset_squares_path)
             directory_annotations = self.dataset_config.dataset_annotations_path
+            print(f"directory_annotations={directory_annotations}")
             # ----------------------------------------
-            for a_filename in os.listdir(directory_annotations):
+            for a_filename in os.listdir(directory_annotations):  # todo 24/08/223 check error path
                 # self.r_config.file_extension_to_search
                 # if a_filename.endswith('.csv'):
                 a_path_filename = os.path.join(directory_annotations, a_filename)

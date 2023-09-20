@@ -1,4 +1,4 @@
-# AK_FRAEX - Azure Kinect Frame Extractor
+# # AKFruitData: AK_FRAEX - Azure Kinect Frame Extractor
 
 Python-based GUI tool to extract frames from video files produced with Azure Kinect cameras. Visit the project site
 at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-frame-extractor/)
