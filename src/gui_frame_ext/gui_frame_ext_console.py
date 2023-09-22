@@ -221,20 +221,10 @@ class GUIFrameExtractorConsole2(tk.Tk):
         ########################################################
         # MESSAGE FRAME
         self.message_frame = tk.LabelFrame(self, text="Info", relief=tk.RIDGE)
-        #self.message_frame.grid(row=3, column=1, sticky=tk.W, padx=5, pady=5)
         self.message_frame.pack(expand=1, fill=tk.X)
-
-        #self.messages_label = tk.Label(self.message_frame, text='Messages:', width=self.LABEL_WIDTH)
-        #self.messages_label.grid(row=1, column=1, sticky=tk.W, ipadx=3, ipady=3)
 
         self.messages_info = tk.Text(self.message_frame, width=65, height=5)
         self.messages_info.grid(row=2, column=1, sticky=tk.W, ipadx=3, ipady=3)
-
-        #self.results_info_label = tk.Label(self.message_frame, text='Results:', width=self.LABEL_WIDTH)
-        #self.results_info_label.grid(row=3, column=1, sticky=tk.W, ipadx=3, ipady=3)
-
-        #self.results_info = tk.Text(self.message_frame, width=65, height=5)
-        #self.results_info.grid(row=4, column=1, sticky=tk.W, ipadx=3, ipady=3)
 
         ########################################################
         self.quit_button = tk.Button(self.message_frame, text='Quit', command=self.quit_app)
@@ -242,7 +232,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
         ########################################################
 
     def create_widgets_tab_3(self):
-        #print(self.current_path_entry.get())
         ########################################################
         # EXTRACT DATA FROM FOLDER
         self.t3_csv_folder_data_frame = tk.LabelFrame(self.tab_3, text=".CSV files to PASCAL_VOC conversion", relief=tk.RIDGE)
@@ -305,7 +294,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
 
     def clean_text_widgets(self):
         self.messages_info.delete("1.0", "end")
-        #self.results_info.delete("1.0", "end")  # todo: clean
 
     def t1_browse_base_path(self):
         analyze_status_str = ""
@@ -379,9 +367,8 @@ class GUIFrameExtractorConsole2(tk.Tk):
             self.t2_current_path_entry.insert(0, os.path.join(directory_selected))
             # ----------------------------------------
 
-        #self.t2_current_path_entry
         # -----------------------
-        # todo: 22/09/2023
+        # 22/09/2023 adding configuration
         base_path = os.path.dirname(os.path.normpath(self.t2_current_path_entry.get()))
         dataset_name = os.path.basename(os.path.normpath(self.t2_current_path_entry.get()))
         print(f"base_path={base_path}")
@@ -492,7 +479,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
             print(self.t2_current_path_entry.get())
             print(self.dataset_config.dataset_sets_path)
             track_file = os.path.join(self.dataset_config.dataset_sets_path, 'all.txt')  # todo: check error with this 19/05/2022
-            #track_file = os.path.join(self.t2_current_path_entry.get(), 'all.txt')  # todo: check error with this 19/05/2022
             # -------------------------
             if self.t2_rgb_check_var.get() == 1:
                 pass
@@ -510,11 +496,8 @@ class GUIFrameExtractorConsole2(tk.Tk):
         # ----------------------------------------
         analyze_status_str = path_filename_selected + "\n"
         self.messages_info.insert("1.0", "Extracting from " + analyze_status_str)
-        self.messages_info.insert("1.0", results_info_str) # todo: clean
+        self.messages_info.insert("1.0", results_info_str)
         self.messages_info.insert("1.0", results_info_str_3d)
-
-        #self.results_info.insert("1.0", results_info_str) # todo: clean
-        #self.results_info.insert("1.0", results_info_str_3d)
         # ----------------------------------------
 
     def t3_select_migrate_folder_data(self):
@@ -527,7 +510,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
             self.messages_info.insert("end", analyze_status_str)
         else:
             # ----------------------------------------
-            #self.current_path_entry.config(state='readonly')
             self.t3_input_csv_folder_entry.config(state='normal')
             self.t3_input_csv_folder_entry.delete(0, "end")
             self.t3_input_csv_folder_entry.insert(0, os.path.join(directory_selected))
@@ -586,7 +568,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
         analyze_status_str = directory_selected
         self.messages_info.insert("end", analyze_status_str)
         self.messages_info.insert("end", ".xml files migrated " + results_info_str)
-        # self.results_info.insert("end", ".xml files migrated " + results_info_str)  # todo: clean
 
 
     def t3_browse_working_folder_data(self):
@@ -615,7 +596,6 @@ class GUIFrameExtractorConsole2(tk.Tk):
         # -----------------------
         analyze_status_str = directory_selected + "\n"
         self.t3_current_path_entry.config(state='readonly')
-        #self.t3_input_folder_entry.config(state='readonly')
         self.messages_info.insert("end", "Selected " + analyze_status_str)
         # ----------------------------------------
 
