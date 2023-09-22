@@ -47,12 +47,25 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/
 Create your Python virtual environment.
 
 ```
+** For Linux systems **
 python3 -m venv ./ak_frame_extractor_venv
 source ./ak_frame_extractor_venv/bin/activate
 pip install --upgrade pip
-
 pip install python -m ak-frame-extractor
+
+** execute package **
 python -m ak_frame_extractor
+
+** For Windows 10 systems **
+python -m venv ./ak_frame_extractor_venv
+.\ak_frame_extractor_venv\Scripts\activate.bat
+python.exe -m pip install --upgrade pip
+pip install ak-frame-extractor
+
+** execute package **
+python -m ak_frame_extractor
+
+
 ```
 
 ### 3.2 Install and run virtual environments using scripts provided

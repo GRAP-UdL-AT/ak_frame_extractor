@@ -64,6 +64,8 @@ Add command line to make it scriptable.
 Convert folders to struc without preprocessed/, manage this.
 Check struc i n.CSV, launch error
 Check structure in .XML, laun error
+Add coverage tests
+
 
 ## User manual tasks
 Modify user manual
