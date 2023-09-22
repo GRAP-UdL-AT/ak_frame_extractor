@@ -21,7 +21,7 @@ import configparser
 
 
 class GUIFrameExtractorConfig2:
-    app_title = 'AK Frame Extractor (AK_FRAEX) v1.0'
+    app_title = 'AK Frame Extractor (AK_FRAEX) v1.3'
     width = 550
     height = 480
     geometry_about = '380x480'

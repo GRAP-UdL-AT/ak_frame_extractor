@@ -29,7 +29,7 @@ if __name__ == '__main__':
     path_extractor_config_file = os.path.join(BASE_DIR, 'conf', 'frames_extractor.conf')
     user_path = expanduser("~")
     base_path = os.path.join(user_path)
-    dataset_name = 'KA_Story_RGB_IR_DEPTH_dataset'  # by default
+    dataset_name = 'KA_Story_RGB_IR_DEPTH_dataset'  # by default  # todo: add here an automatic data generation
     dataset_manager_config_obj = DatasetConfig(base_path, dataset_name)
     frames_extractor_config = FramesManagerConfig(path_extractor_config_file)
 

@@ -25,7 +25,7 @@ from gui_frame_ext.gui_frame_ext_config import GUIFrameExtractorConfig2
 
 class AboutWindow2(tk.Toplevel):
     title_str = 'AK Frame Extractor (AK_FRAEX)'
-    version_number_str = '1.2'
+    version_number_str = '1.3'
 
     def __init__(self, parent):
         super().__init__(parent)
@@ -34,8 +34,8 @@ class AboutWindow2(tk.Toplevel):
         self.resizable(width=False, height=False)  # do not change the size
         self.attributes('-topmost', True)
         assets_path = os.path.dirname(os.path.abspath(__file__))
-        img_path = os.path.join(assets_path, 'assets', 'ak_fraex_32.png')
-        self.iconphoto(False, tk.PhotoImage(file=img_path))
+        img_path_02 = os.path.join(assets_path, 'assets', 'ak_fraex_32.png')
+        self.iconphoto(False, tk.PhotoImage(file=img_path_02))
         # ---------------------------
 
         about_label = tk.Label(self, text=self.title_str+' '+self.version_number_str)
@@ -43,6 +43,13 @@ class AboutWindow2(tk.Toplevel):
         about_label.pack(anchor=tk.CENTER)
 
         text_info = tk.Label(self)
+
+        img_label_01 = tk.Label(self)
+        assets_path = os.path.dirname(os.path.abspath(__file__))
+        img_path_01 = os.path.join(assets_path, 'assets', 'ak_fraex_100.png')
+        img_label_01.image = tk.PhotoImage(file=img_path_01)
+        img_label_01['image'] = img_label_01.image
+        img_label_01.pack()
 
         about_text_info = f' \n' \
                           f'Created by: Juan Carlos Miranda\n' \
@@ -62,12 +69,12 @@ class AboutWindow2(tk.Toplevel):
         text_info['text'] = about_text_info
         text_info.pack(anchor=tk.CENTER)
 
-        img_label = tk.Label(self)
+        img_label_02 = tk.Label(self)
         assets_path = os.path.dirname(os.path.abspath(__file__))
-        img_path = os.path.join(assets_path, 'assets', 'logo_grap.png')
-        img_label.image = tk.PhotoImage(file=img_path)
-        img_label['image'] = img_label.image
-        img_label.pack()
+        img_path_02 = os.path.join(assets_path, 'assets', 'logo_grap.png')
+        img_label_02.image = tk.PhotoImage(file=img_path_02)
+        img_label_02['image'] = img_label_02.image
+        img_label_02.pack()
 
         buttonClose = tk.Button(self, text='Close', command=self.destroy)
         buttonClose.pack(expand=True)

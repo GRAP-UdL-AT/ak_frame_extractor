@@ -1,7 +1,7 @@
 # # AKFruitData: AK_FRAEX - Azure Kinect Frame Extractor
 
 Python-based GUI tool to extract frames from video files produced with Azure Kinect cameras. Visit the project site
-at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-frame-extractor/)
+at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-frame-extractor/) and check the source code at [https://github.com/GRAP-UdL-AT/ak_frame_extractor/](https://github.com/GRAP-UdL-AT/ak_frame_extractor/)
 
 ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/docs/img/ak_frame_extractor_presentation.png?raw=true)
 
@@ -20,7 +20,7 @@ at [https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-fr
   this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with
   pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
 * In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
-  in [azure_kinect_notes](https://github.com/GRAP-UdL-AT/ak_acquisition_system/tree/main/docs/azure_kinect_notes/).
+  in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes/).
 * Videos recorded with the Azure Kinect camera, optional video samples are available at [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://zenodo.org/record/8232445)
 
 
